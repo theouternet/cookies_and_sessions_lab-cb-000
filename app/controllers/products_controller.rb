@@ -13,4 +13,10 @@ class ProductsController < ApplicationController
     session[:cart] = cart
   end 
   
+  private 
+  
+   def product_params
+    params.permit(:product)
+  end
+  
 end 
